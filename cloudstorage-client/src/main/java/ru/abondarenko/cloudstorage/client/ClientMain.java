@@ -1,4 +1,4 @@
-package ru.happyshark.cloudstorage.client;
+package ru.abondarenko.cloudstorage.client;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class ClientMain extends Application {
+    public static final String CLIENT_FILES_LOCATION = "./client-files";
 
     @Override
     public void start(Stage primaryStage) throws Exception{

@@ -1,4 +1,4 @@
-package ru.happyshark.cloudstorage.server;
+package ru.abondarenko.cloudstorage.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

@@ -1,4 +1,4 @@
-package ru.happyshark.cloudstorage.client;
+package ru.abondarenko.cloudstorage.client;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -6,8 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import ru.happyshark.cloudstorage.library.LocalUtils;
-import ru.happyshark.cloudstorage.library.NetworkUtils;
+import ru.abondarenko.cloudstorage.library.LocalUtils;
+import ru.abondarenko.cloudstorage.library.NetworkUtils;
 
 import java.net.URL;
 import java.nio.file.Paths;
@@ -51,8 +51,6 @@ public class Controller implements Initializable {
 
         String address = serverAddress.getText();
         int port = Integer.parseInt(serverPort.getText());
-        //String login = loginField.getText();
-        //String password = passwordField.getText();
 
         try {
             client.connect(this, address, port);
@@ -121,7 +119,7 @@ public class Controller implements Initializable {
         Platform.runLater(() -> {
             try {
                 leftPanel.getItems().clear();
-                leftPanel.getItems().addAll(LocalUtils.getFileListFromDirectory(Paths.get("./client-files")));
+                leftPanel.getItems().addAll(LocalUtils.getFileListFromDirectory(Paths.get(ClientMain.CLIENT_FILES_LOCATION)));
             } catch (Exception e) {
                 new Alert(Alert.AlertType.WARNING, "Unable to update client file list", ButtonType.OK).showAndWait();
             }

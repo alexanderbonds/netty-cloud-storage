@@ -1,4 +1,4 @@
-package ru.happyshark.cloudstorage.client;
+package ru.abondarenko.cloudstorage.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;

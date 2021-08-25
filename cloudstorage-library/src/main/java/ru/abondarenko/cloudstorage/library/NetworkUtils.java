@@ -1,4 +1,4 @@
-package ru.happyshark.cloudstorage.library;
+package ru.abondarenko.cloudstorage.library;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;

@@ -1,6 +1,6 @@
-package ru.happyshark.cloudstorage.client;
+package ru.abondarenko.cloudstorage.client;
 
-import ru.happyshark.cloudstorage.library.NetworkUtils;
+import ru.abondarenko.cloudstorage.library.NetworkUtils;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -38,11 +38,11 @@ public class Client {
     }
 
     public void copyFileToServer(String filename) throws Exception {
-        sendFileToServer(Paths.get("./client-files/" + filename));
+        sendFileToServer(Paths.get(ClientMain.CLIENT_FILES_LOCATION, filename));
     }
 
     public void deleteFile(String filename) throws Exception {
-        Files.delete(Paths.get("./client-files/" + filename));
+        Files.delete(Paths.get(ClientMain.CLIENT_FILES_LOCATION, filename));
     }
 
     public void requestFile(String filename) {
